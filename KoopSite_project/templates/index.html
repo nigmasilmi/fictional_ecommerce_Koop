@@ -1,0 +1,11 @@
+{%  extends 'base.html' %}
+
+{% block contenido_esp1 %}
+{{ title }}
+<h3>Estamos en home</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, optio?</p>
+
+{% for item in products %}
+{{item.imagen}}
+{% endfor %}
+{% endblock %}

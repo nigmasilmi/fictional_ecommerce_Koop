@@ -1,0 +1,11 @@
+{%  extends 'base.html' %}
+
+{% block contenido_esp1 %}
+{{ title }}
+
+
+{% for item in query_set %}
+{{ item.nombre }}
+<img src="{{ item.imagen.url }}" alt="">
+{% endfor %}
+{% endblock %}
