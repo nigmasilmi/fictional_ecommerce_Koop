@@ -1,11 +1,13 @@
 {%  extends 'base.html' %}
 
-{% block contenido_esp1 %}
-{{ title }}
 
+{% block row_1 %}
+{% for item in productos_koop %}
+<div class="col-md-3 product_box">
+    <h4 style="text-align:center">{{ item.nombre }}</h4>
+    <img class="product_img img-fluid" src="{{ item.imagen.url }}" alt="">
+    <h5 style="text-align:center"> oferta: $CLP {{ item.precio }}</h5>
 
-{% for item in query_set %}
-{{ item.nombre }}
-<img src="{{ item.imagen.url }}" alt="">
+</div>
 {% endfor %}
 {% endblock %}

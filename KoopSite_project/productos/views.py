@@ -1,13 +1,19 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView
 from .models import Producto
 
 
-def productos_list_view(request):
-    qs = Producto.objects.all()
-    print(qs)
-    for item in qs:
-        print(item.nombre)
-        print(item.imagen.url)
-    title = 'Lista de productos disponibles'
+class ProductosListView(ListView):
+    model = Producto
+    context_object_name = 'productos_koop'
     template_name = 'lista_productos.html'
-    return render(request, template_name, {'query_set': qs, 'title': title})
+
+
+class ProductosDetailView(DetailView):
+    queryset = Producto.objects.all()
+    template_name = 'detalle_producto.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ProductosDetailView, self).get_context_data(*args, **kwargs)
+        print(context)
+        return context

@@ -23,5 +23,6 @@ urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('', home),
                   path('catalogo/', include('productos.urls')),
+                  path('api/catalogo/', include('productos.api.urls')),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

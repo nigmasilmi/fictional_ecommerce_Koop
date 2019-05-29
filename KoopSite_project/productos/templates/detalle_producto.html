@@ -1,0 +1,15 @@
+{%  extends 'base.html' %}
+
+{% block contenido_esp1 %}
+
+
+
+<h2>{{ object.nombre }}</h2>
+<h5>{{ object.categoria }}</h5>
+<img src="{{ object.imagen.url }}" alt="">
+<p>Precio: $CLP {{ object.precio }}</p>
+<p>Descripción del Producto: {{ object.detalles }}</p>
+<p>En nuestra tienda desde el: {{ object.fecha_ingreso }}</p>
+<p>Stock: {{ object.stock }}</p>
+
+{% endblock %}

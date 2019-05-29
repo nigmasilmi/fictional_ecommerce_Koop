@@ -1,8 +1,41 @@
 body{
  font-family: 'Josefin Sans', sans-serif;
-
+    background-color: #CC9900;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Righteous', cursive;
 }
+
+.container{
+    background-color: #B0820F;
+
+}
+
+.product_img{
+    min-width: 100%
+    max-width: 120%;
+    height:auto;
+
+}
+
+.product_box{
+    padding: 1%;
+    margin: 2%;
+}
+
+.row{
+    justify-content: space-around;
+}
+
+.bg-light{
+    background-color: #232F3E !important ;
+  }
+
+nav{
+
+    font-size: 1.23em;
+    color: white !important ;
+
+}
+
