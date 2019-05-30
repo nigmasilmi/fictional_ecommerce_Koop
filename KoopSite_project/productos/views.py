@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.http import Http404
 from django.views.generic import ListView, DetailView
 from .models import Producto
 
@@ -17,3 +17,11 @@ class ProductosDetailView(DetailView):
         context = super(ProductosDetailView, self).get_context_data(*args, **kwargs)
         print(context)
         return context
+
+    def get_object(self, *args, **kwargs):
+        request = self.request
+        pk = self.kwargs.get('pk')
+        instance = Producto.objects.get_by_id(pk)
+        if instance is None:
+            raise Http404("Producto no existente")
+        return instance
