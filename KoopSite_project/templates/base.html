@@ -30,35 +30,46 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'acerca_de' %}">Inicio<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Nuestra marca</a>
-            </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
                     Catálogo de Productos
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Deportes</a>
-                    <a class="dropdown-item" href="#">Electrónicos</a>
+                    <a class="dropdown-item" href="#">Sports</a>
+                    <a class="dropdown-item" href="#">Electronics</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Misceláneos</a>
+                    <a class="dropdown-item" href="#">Other</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'acerca_de' %}">Our brand</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacto' %}">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'registro' %}">Register</a>
             </li>
 
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Encuentra lo que buscas</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">What are you looking for?</button>
         </form>
     </div>
 </nav>
 
-<h4 style="text-align:center">SITIO WEB EN CONSTRUCCIÓN - FORMATO PRODUCCIÓN - LA FUNCIONALIDAD ESTÁ EN CONSTRUCCIÓN</h4>
+<h4 style="text-align:center">SITIO WEB EN CONSTRUCCIÓN - FORMATO PRODUCCIÓN - LA FUNCIONALIDAD ESTÁ EN
+    CONSTRUCCIÓN</h4>
 {% block contenido_esp1 %}
-    {% endblock %}
+{% endblock %}
 <div class="container">
 
     <div class="container p-5 mt-5 mb-4">
