@@ -1,0 +1,31 @@
+{%  extends 'base.html' %}
+<head>
+    <title>{{ title }}</title>
+</head>
+{% block contenido_esp1 %}
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-sm-6 col-12">
+            <h3>{{ title }}</h3>
+            <!--
+            <form action="." method="POST">{% csrf_token %}
+                <label for="nameId">Your name</label>
+                <input id="nameId" class="form-control" type="text" name="nombre">
+                <label for="nameId">Your email</label>
+                <input id="emailId" class="form-control" type="email" name="email">
+                <label for="nameId">Tell us your request</label>
+                <textarea class="form-control" name="comentarios" id="commentsId" cols="30" rows="10"></textarea>
+                <button class="btn btn-danger" type="submit">Send</button>
+            </form>
+            -->
+            <form action="." method="POST">{% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-danger" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
